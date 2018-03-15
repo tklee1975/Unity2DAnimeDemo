@@ -13,6 +13,8 @@ public class GameCharacter : MonoBehaviour {
 
 	// Internal Data 
 	private Animator mAnimator;
+	private AnimeEvent mAnimeEvent = null;
+
 
 	/// <summary>
 	/// Awake is called when the script instance is being loaded.
@@ -20,6 +22,7 @@ public class GameCharacter : MonoBehaviour {
 	void Awake()
 	{
 		mAnimator = transform.Find("Body").GetComponent<Animator>();
+		mAnimeEvent = transform.Find("Body").GetComponent<AnimeEvent>();
 	}
 	// Use this for initialization
 	void Start () {
@@ -45,5 +48,17 @@ public class GameCharacter : MonoBehaviour {
 			mAnimator.SetTrigger("Hit");
 		}
 		//mAnimator.
+	}
+
+	public void SetAnimeEndCallback(AnimeEvent.AnimeEndCallback callback) {
+		if(mAnimeEvent != null) {
+			mAnimeEvent.EndCallback = callback;
+		}
+	}
+	
+	public void SetAnimeEventCallback(AnimeEvent.EventCallback callback) {
+		if(mAnimeEvent != null) {
+			mAnimeEvent.Callback = callback;
+		}
 	}
 }
