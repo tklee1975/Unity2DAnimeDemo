@@ -16,6 +16,9 @@ public class GameCharacter : MonoBehaviour {
 	private AnimeEvent mAnimeEvent = null;
 
 
+	public GameObject valueTextPrefab;
+	private Transform mDamageSpawnPosTF;
+
 	/// <summary>
 	/// Awake is called when the script instance is being loaded.
 	/// </summary>
@@ -23,6 +26,7 @@ public class GameCharacter : MonoBehaviour {
 	{
 		mAnimator = transform.Find("Body").GetComponent<Animator>();
 		mAnimeEvent = transform.Find("Body").GetComponent<AnimeEvent>();
+		mDamageSpawnPosTF = transform.Find("DamageSpawnPos");
 	}
 	// Use this for initialization
 	void Start () {
@@ -60,5 +64,21 @@ public class GameCharacter : MonoBehaviour {
 		if(mAnimeEvent != null) {
 			mAnimeEvent.Callback = callback;
 		}
+	}
+
+	public void ShowDamageText(int value) {
+		Debug.Log("Face Dir=" + transform.localScale.x);
+		GameObject obj = GameObject.Instantiate(valueTextPrefab);
+		obj.transform.SetParent(transform);
+		obj.transform.localPosition = mDamageSpawnPosTF.localPosition;
+
+		ValueAnimation valueAnime = obj.GetComponent<ValueAnimation>();
+		valueAnime.autoDestroy = true;
+		valueAnime.Show(value, 1);
+	}
+
+	public void GetHit(int value) {
+		ChangeAnimeAction(AnimeAction.Hit);
+		ShowDamageText(value);
 	}
 }
