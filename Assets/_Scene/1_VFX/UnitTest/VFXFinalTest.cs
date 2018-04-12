@@ -5,12 +5,15 @@ using UnityEngine.UI;
 using SimpleTDD;
 
 public class VFXFinalTest : BaseTest {
-	public Animator vfxAnimator;
+	public VFX battleVFX;
+	public GameCharacter targetCharacter;
 
 	[Test]
-	public void StartVFX()
+	public void PlayVFX()
 	{
-		vfxAnimator.SetTrigger("Fire");
+		battleVFX.targetCharacter = targetCharacter;
+		battleVFX.hitDamage = 1000;
+		battleVFX.Play();
 	}
 
 }

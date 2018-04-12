@@ -479,7 +479,7 @@ AnimationClip:
     intParameter: 1
     messageOptions: 0
   - time: 1.6833333
-    functionName: OnHit
+    functionName: DoOnHitCallback
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

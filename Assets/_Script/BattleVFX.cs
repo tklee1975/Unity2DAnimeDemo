@@ -13,7 +13,7 @@ public class BattleVFX : MonoBehaviour {
 	/// </summary>
 	void Awake()
 	{	
-		mAnimator = transform.Find("Body").GetComponent<Animator>();
+		mAnimator = GetComponentInChildren<Animator>();
 		mAnimeEvent = transform.Find("Body").GetComponent<AnimeEvent>();
 	}
 

@@ -27,7 +27,7 @@ public class DamageValueTest : BaseTest {
 	public void ShowText() {
 		valueAnimation.GetComponent<TextMesh>().color = Color.red;
 		valueAnimation.transform.localPosition = new Vector3(0, 0.2f, -3);
-		valueAnimation.Show(-10, -1);
+		valueAnimation.Show(-10);
 	}
 
 	[Test]

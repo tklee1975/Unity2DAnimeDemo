@@ -74,7 +74,7 @@ public class GameCharacter : MonoBehaviour {
 
 		ValueAnimation valueAnime = obj.GetComponent<ValueAnimation>();
 		valueAnime.autoDestroy = true;
-		valueAnime.Show(value, 1);
+		valueAnime.Show(value);
 	}
 
 	public void GetHit(int value) {

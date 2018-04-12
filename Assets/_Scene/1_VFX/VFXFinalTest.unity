@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16f61820408a34a03bc83510bb772e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vfxAnimator: {fileID: 993046701}
+  battleVFX: {fileID: 993046705}
 --- !u!4 &70512367
 Transform:
   m_ObjectHideFlags: 0
@@ -361,12 +361,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 80c30972370b0496d973f3a67f6e11b0, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &470964129 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114303675400830910, guid: ee157ef4f4d7b4933a3e8ed8bf97452b,
-    type: 2}
-  m_PrefabInternal: {fileID: 1495679375}
-  m_Script: {fileID: 11500000, guid: 55b9fd1174c8640efbab727c18077fb4, type: 3}
 --- !u!224 &704214133 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224190275382145872, guid: 488147d7c93ed4f52b9f9fee6e7a3306,
@@ -384,7 +378,7 @@ GameObject:
   - component: {fileID: 993046701}
   - component: {fileID: 993046702}
   - component: {fileID: 993046703}
-  - component: {fileID: 993046704}
+  - component: {fileID: 993046705}
   m_Layer: 0
   m_Name: VFX_Fire
   m_TagString: Untagged
@@ -560,7 +554,7 @@ MonoBehaviour:
   clipList:
   - {fileID: 8300000, guid: e33114457e8ef4f628312d1e83acc115, type: 3}
   - {fileID: 8300000, guid: 141e1cc70b3f84798b55e9b19a32f109, type: 3}
---- !u!114 &993046704
+--- !u!114 &993046705
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -568,11 +562,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 993046698}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa8d78a6ed7a44c5aba469c1da8da719, type: 3}
+  m_Script: {fileID: 11500000, guid: b7597d106a7c74b9b8eb33d4dcb02254, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetCharacter: {fileID: 470964129}
-  damageValue: 1000
 --- !u!1 &1139182135
 GameObject:
   m_ObjectHideFlags: 0
