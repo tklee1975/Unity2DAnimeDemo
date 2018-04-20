@@ -15,6 +15,7 @@ public class ValueAnimation : MonoBehaviour {
 	protected bool mStartMoving = false;
 
 	protected float mRemainTime = 0;
+	protected bool mIsDone = false;
 
 	protected TextMesh mText;
 
@@ -30,7 +31,7 @@ public class ValueAnimation : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+		mIsDone = false;
 	}
 
 	public void Show(int value) {		// dir +ve: jump to left, -ve jump to right
@@ -55,7 +56,12 @@ public class ValueAnimation : MonoBehaviour {
 			return;
 		}
 
+		if(mIsDone) {
+			return;
+		}
+
 		if(mRemainTime <= 0) {
+			mIsDone = true;
 			RemoveSelf();
 			return;
 		}
