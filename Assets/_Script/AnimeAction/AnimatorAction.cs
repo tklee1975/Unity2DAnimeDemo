@@ -13,6 +13,7 @@ public class AnimatorAction : AnimeAction {
     public string triggerState = "";
     public AnimeAction onHitAction = null;
     public float playDuration = -1;                 // default: 
+    public bool doneWhenHit = false;
 
     protected override void OnStart()
     {
@@ -33,6 +34,23 @@ public class AnimatorAction : AnimeAction {
 
     }
 
+    protected override void OnUpdate() {
+        UpdateHitAction();
+    }
+
+    protected void UpdateHitAction() {
+        if(onHitAction == null) {
+            return;
+        }
+        if(onHitAction.IsStarted() == false) {
+            return;
+        }
+        if(onHitAction.IsDone()) {
+            return;
+        }
+        onHitAction.Update(mDeltaTime);
+    }
+
     public override bool IsDone() {
         if(onHitAction != null) {
             if(onHitAction.IsDone() == false) {
@@ -46,13 +64,28 @@ public class AnimatorAction : AnimeAction {
 
 
     protected virtual void OnAnimeEnd() {
+        Debug.Log("OnAnimeEnd:" + name);
+        if(onHitAction != null) {
+            return;
+        }
+        
         MarkAsDone();
     }
 
     protected virtual void OnAnimeEvent(string eventName) {
-        if(eventName == "hit") {
+        if(eventName.ToLower() == "hit") {
+            Debug.Log("Receive hit event");
+            if(doneWhenHit) {
+                MarkAsDone();
+                return;
+            }
+
+
+            
             if(onHitAction != null) {
+                Debug.Log("Start OnHitAction");
                 onHitAction.Start();
+                return;
             }
         }
     }

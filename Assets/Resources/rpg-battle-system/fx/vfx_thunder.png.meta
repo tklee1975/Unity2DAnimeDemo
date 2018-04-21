@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: ba585b2951a9142348ac582fd06721e1
-timeCreated: 1521010080
+timeCreated: 1524338337
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -9,6 +9,9 @@ TextureImporter:
     21300004: vfx_thunder_2
     21300006: vfx_thunder_3
     21300008: vfx_thunder_4
+    21300010: vfx_thunder_5
+    21300012: vfx_thunder_6
+    21300014: vfx_thunder_8
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -132,8 +135,8 @@ TextureImporter:
         y: 0
         width: 140
         height: 86
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -146,8 +149,8 @@ TextureImporter:
         y: 0
         width: 140
         height: 86
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -160,8 +163,8 @@ TextureImporter:
         y: 0
         width: 140
         height: 86
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -174,8 +177,8 @@ TextureImporter:
         y: 0
         width: 140
         height: 86
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -187,6 +190,48 @@ TextureImporter:
         x: 560
         y: 0
         width: 140
+        height: 86
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: vfx_thunder_5
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 0
+        width: 597
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: vfx_thunder_6
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 0
+        width: 746
+        height: 86
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: vfx_thunder_8
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 0
+        width: 162
         height: 86
       alignment: 0
       pivot: {x: 0, y: 0}

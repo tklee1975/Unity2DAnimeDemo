@@ -10,7 +10,10 @@ public class SequenceAction : AnimeAction {
 	
 
 	protected override void OnStart() {
-		name = "sequence:size=" + mActionList.Count;
+		if(name == "") {
+			name = "sequence:size=" + mActionList.Count;
+		}
+		
 		SetDuration(-1);
 
 		ResetPendingList();

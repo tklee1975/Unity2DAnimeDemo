@@ -315,6 +315,11 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224463117636738518, guid: 5180051aa903d4472b405a2b1643ed79,
     type: 2}
   m_PrefabInternal: {fileID: 95941704}
+--- !u!95 &109807613 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95484824559948242, guid: b772922fad4014e589540cd2d9def321,
+    type: 2}
+  m_PrefabInternal: {fileID: 1251578946}
 --- !u!1001 &213432950
 Prefab:
   m_ObjectHideFlags: 0
@@ -504,12 +509,12 @@ Prefab:
     - target: {fileID: 224136825511191182, guid: e166a915fe3674563ab06c177eb6fe2b,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -3.9
+      value: -2.2403045
       objectReference: {fileID: 0}
     - target: {fileID: 224136825511191182, guid: e166a915fe3674563ab06c177eb6fe2b,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 1
+      value: 1.4741983
       objectReference: {fileID: 0}
     - target: {fileID: 224136825511191182, guid: e166a915fe3674563ab06c177eb6fe2b,
         type: 2}
@@ -553,7 +558,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1264154757885606, guid: e166a915fe3674563ab06c177eb6fe2b, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e166a915fe3674563ab06c177eb6fe2b, type: 2}
@@ -579,7 +584,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &308729620
 Transform:
   m_ObjectHideFlags: 0
@@ -707,7 +712,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -407836595
+  randomSeed: -602157116
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -4069,6 +4074,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d9dd885e3bf4e6d8be0645c8ae3a72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1076447229 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95853446170982060, guid: e166a915fe3674563ab06c177eb6fe2b,
+    type: 2}
+  m_PrefabInternal: {fileID: 280966091}
 --- !u!224 &1108107371 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224463117636738518, guid: 5180051aa903d4472b405a2b1643ed79,
@@ -4186,7 +4196,7 @@ Prefab:
     - target: {fileID: 224962973691424006, guid: b772922fad4014e589540cd2d9def321,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 3.79
       objectReference: {fileID: 0}
     - target: {fileID: 224962973691424006, guid: b772922fad4014e589540cd2d9def321,
         type: 2}
@@ -4234,6 +4244,10 @@ Prefab:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1668911769890330, guid: b772922fad4014e589540cd2d9def321, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800482316247818, guid: b772922fad4014e589540cd2d9def321, type: 2}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -4319,6 +4333,9 @@ MonoBehaviour:
   actionManager: {fileID: 415238334}
   animator1: {fileID: 1342276380}
   animator2: {fileID: 267269010}
+  charAnimator: {fileID: 109807613}
+  enemyAnimator: {fileID: 1798877027}
+  enemyAnimator2: {fileID: 1076447229}
   battleVFX1: {fileID: 0}
   battleVFX2: {fileID: 0}
   enemy: {fileID: 1801725271}
@@ -4862,7 +4879,7 @@ Prefab:
     - target: {fileID: 224136825511191182, guid: e166a915fe3674563ab06c177eb6fe2b,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -0.9676256
+      value: -5.01
       objectReference: {fileID: 0}
     - target: {fileID: 224136825511191182, guid: e166a915fe3674563ab06c177eb6fe2b,
         type: 2}
@@ -4920,7 +4937,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1264154757885606, guid: e166a915fe3674563ab06c177eb6fe2b, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e166a915fe3674563ab06c177eb6fe2b, type: 2}
@@ -4952,6 +4969,11 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1798877020}
   m_Script: {fileID: 11500000, guid: 55b9fd1174c8640efbab727c18077fb4, type: 3}
+--- !u!95 &1798877027 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95853446170982060, guid: e166a915fe3674563ab06c177eb6fe2b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1798877020}
 --- !u!114 &1801725271 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114699832240066630, guid: e166a915fe3674563ab06c177eb6fe2b,

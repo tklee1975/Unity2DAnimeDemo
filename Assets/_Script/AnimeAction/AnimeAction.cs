@@ -62,6 +62,10 @@ public class AnimeAction {
 	}
 
 	protected void MarkAsDone() {
+		 if(mIsDone) {
+            return;
+        }
+
 		OnDone();
 		mIsDone = true;
 		mIsStarted = false;
