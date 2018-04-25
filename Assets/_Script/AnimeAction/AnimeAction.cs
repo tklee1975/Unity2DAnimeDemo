@@ -96,6 +96,13 @@ public class AnimeAction {
 		return mTimeElapse;
 	}
 
+	public float GetTimeElapsedRatio() {
+		if(mDuration <= 0) {
+			return 0;
+		}
+
+		return mTimeElapse / mDuration;
+	}
 
 
 

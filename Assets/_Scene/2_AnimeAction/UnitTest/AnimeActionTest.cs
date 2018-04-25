@@ -25,6 +25,92 @@ public class AnimeActionTest : BaseTest {
 
 	public GameObject hitValuePrefab;
 
+	public GameObject testObject;
+	public GameObject projectilePrefab;
+
+	public AnimationClip animeClip;
+
+	const float zOrderVfx = -3;
+
+	[Test]
+	public void SimpleAnime() {
+		SimpleAnimationAction action = new SimpleAnimationAction();
+		action.clip = animeClip;
+		action.spawnPosition = new Vector3(0, 0, zOrderVfx);
+		action.repeat = 3;
+		action.destroySelf = false;
+
+		actionManager.RunAction(action);
+	}
+
+
+	[Test]
+	public void ObjectMoveAction()
+	{
+		
+
+		ObjectMoveAction action = new ObjectMoveAction();
+		action.startPosition = new Vector3(0, 0, zOrderVfx);
+		action.endPosition = new Vector3(-3, -3, zOrderVfx);
+		action.objectPrefab = testObject;
+		action.SetDuration(0.5f);
+
+
+		actionManager.RunAction(action);
+	}
+
+	[Test]
+	public void MoveAction()
+	{
+		float zOrderVfx = -3;
+
+		MoveAction action = new MoveAction();
+		action.startPosition = new Vector3(0, 0, zOrderVfx);
+		//action.endPosition = new Vector3(3, 3, zOrderVfx);
+		action.endPosition = new Vector3(-3, -3, zOrderVfx);
+		action.targetObject = testObject;
+		action.SetDuration(0.5f);
+
+
+		actionManager.RunAction(action);
+	}
+
+	[Test]
+	public void CastProjectile()
+	{
+		
+		// Using ObjectMove
+		ObjectMoveAction projectAction = new ObjectMoveAction();
+		projectAction.startPosition = player.GetLaunchPosition() + new Vector3(0, 0, zOrderVfx);;
+		projectAction.endPosition = enemyAnimator.transform.position + new Vector3(0, 1, zOrderVfx);
+		projectAction.objectPrefab = projectilePrefab;
+		projectAction.SetDuration(0.5f);
+
+		SimpleAnimationAction explodeAction = new SimpleAnimationAction();
+		explodeAction.clip = animeClip;
+		explodeAction.spawnPosition = enemyAnimator.transform.position  + new Vector3(0, 0, zOrderVfx);
+		explodeAction.repeat = 1;
+		
+		SequenceAction fullFireAction = new SequenceAction();
+		fullFireAction.AddAction(projectAction);
+		fullFireAction.AddAction(explodeAction);
+
+		// Using MoveAction 
+		// MoveAction moveAction = new MoveAction();
+		// moveAction.startPosition = player.GetLaunchPosition();
+		// moveAction.endPosition = enemyAnimator.transform.position + new Vector3(0, 1, 0);
+		// moveAction.targetObject = testObject;
+		// moveAction.SetDuration(0.5f);
+
+		AnimatorAction animeAction = new AnimatorAction();
+		animeAction.name = "character";
+		animeAction.animator = charAnimator;
+		animeAction.triggerState = "Cast";
+		animeAction.onHitAction = fullFireAction;
+
+		actionManager.RunAction(animeAction);
+	}
+
 	[Test]
 	public void DelayAction()
 	{

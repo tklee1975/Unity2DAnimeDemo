@@ -18,6 +18,8 @@ public class GameCharacter : MonoBehaviour {
 
 	public GameObject valueTextPrefab;
 	private Transform mDamageSpawnPosTF;
+	public Transform launchPositionTF;
+	
 
 	/// <summary>
 	/// Awake is called when the script instance is being loaded.
@@ -80,5 +82,13 @@ public class GameCharacter : MonoBehaviour {
 	public void GetHit(int value) {
 		ChangeAnimeAction(AnimeAction.Hit);
 		ShowDamageText(value);
+	}
+
+	public Vector3 GetLaunchPosition() {	// Fir
+		if(launchPositionTF == null) {
+			return Vector3.zero;
+		}
+
+		return launchPositionTF.position;
 	}
 }
