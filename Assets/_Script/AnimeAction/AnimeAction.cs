@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AnimeAction {
-	public string name = "unknown";
+	public string name = "";
 	protected bool mIsDone = false;
 	protected bool mIsStarted = false;
 
@@ -11,6 +11,21 @@ public class AnimeAction {
 	protected float mTimeElapse = 0;	// used tell whether need to echo or not 
 
 	protected float mDeltaTime;
+
+	protected AnimeActionManager mManager;
+
+	public void SetManager(AnimeActionManager _manager) {
+		mManager = _manager;
+	}
+
+	public void StartAction(AnimeAction action) {
+		if(mManager != null) {
+			Debug.Log("ERROR: AnimeAction: queue action=" + action.name);
+			mManager.QueueNewAction(action);
+		} else {
+			Debug.Log("ERROR: AnimeActionManager: manager is null");
+		}
+	}
 
 
 	public virtual void Start() {
@@ -30,6 +45,8 @@ public class AnimeAction {
 
 	public virtual void Update(float deltaTime) {
 		mDeltaTime = deltaTime;
+		mTimeElapse += mDeltaTime;
+
 		if(CheckAndReduceTime()) {
 			MarkAsDone();
 		}
@@ -61,6 +78,10 @@ public class AnimeAction {
 		// For extension
 	}
 
+	protected void SetEndByCondition() {
+		SetDuration(-1);
+	}
+
 	protected void MarkAsDone() {
 		 if(mIsDone) {
             return;
@@ -85,8 +106,6 @@ public class AnimeAction {
 		if(mTimeElapse >= mDuration) {
 			return true;
 		}
-
-		mTimeElapse += mDeltaTime;
 
 		return false;
 	}

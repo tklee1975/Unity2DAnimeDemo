@@ -43,6 +43,41 @@ public class AnimeActionTest : BaseTest {
 		actionManager.RunAction(action);
 	}
 
+	[Test]
+	public void ScheduleAction() {
+		ScheduleAction scheduleAction = new ScheduleAction();
+
+		HitValueAction hitAction;
+		
+		hitAction = new HitValueAction();
+		hitAction.valueTextPrefab = hitValuePrefab;
+		hitAction.hitValue = 999;
+		hitAction.position = new Vector3(0, 2, -2);
+		scheduleAction.Schedule(0.5f, hitAction);
+
+		hitAction = new HitValueAction();
+		hitAction.valueTextPrefab = hitValuePrefab;
+		hitAction.hitValue = 888;
+		hitAction.position = new Vector3(1, 1, -2);
+		scheduleAction.Schedule(1.0f, hitAction);
+
+		hitAction = new HitValueAction();
+		hitAction.valueTextPrefab = hitValuePrefab;
+		hitAction.hitValue = 777;
+		hitAction.position = new Vector3(2, 0, -2);
+		scheduleAction.Schedule(4.0f, hitAction);
+
+
+		// SimpleAnimationAction action = new SimpleAnimationAction();
+		// action.clip = animeClip;
+		// action.spawnPosition = new Vector3(0, 0, zOrderVfx);
+		// action.repeat = 3;
+		// action.destroySelf = false;
+
+		actionManager.RunAction(scheduleAction);
+	}
+
+
 
 	[Test]
 	public void ObjectMoveAction()

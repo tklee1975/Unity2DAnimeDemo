@@ -35,7 +35,7 @@ public class AnimatorAction : AnimeAction {
     }
 
     protected override void OnUpdate() {
-        UpdateHitAction();
+      //  UpdateHitAction();
     }
 
     protected void UpdateHitAction() {
@@ -64,10 +64,7 @@ public class AnimatorAction : AnimeAction {
 
 
     protected virtual void OnAnimeEnd() {
-        Debug.Log("OnAnimeEnd:" + name);
-        if(onHitAction != null) {
-            return;
-        }
+        //Debug.Log("OnAnimeEnd:" + name);
         
         MarkAsDone();
     }
@@ -83,9 +80,9 @@ public class AnimatorAction : AnimeAction {
 
             
             if(onHitAction != null) {
-                Debug.Log("Start OnHitAction");
-                onHitAction.Start();
-                return;
+                //Debug.Log("Start OnHitAction");
+                //onHitAction.Start();
+                StartAction(onHitAction);
             }
         }
     }
