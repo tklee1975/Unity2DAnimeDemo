@@ -35,11 +35,15 @@ public class AttackAction : AnimeAction {
 
 
 		BattleModel.Callback endCallback = () => {
+			Debug.Log(" Move Bak done");
 			MarkAsDone();
 		};
 
+		Debug.Log("Start Moving Fwd");
 		actor.MoveForward(endPos, () => {
+			Debug.Log("Start Attack");
 			actor.Attack(style, hitCallback, ()=> {
+				Debug.Log("Start Move Bak");
 				actor.MoveBack(endCallback);
 			});
 		});
@@ -52,7 +56,7 @@ public class AttackAction : AnimeAction {
 	protected void OnAttackHit() {
 		// Debug.Log("AttackAction: OnAttackHit");
 		if(onHitAction != null) {
-			StartAction(onHitAction);
+			AddSubAction(onHitAction);
 		}
 	}
 }

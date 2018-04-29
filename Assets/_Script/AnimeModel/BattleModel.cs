@@ -118,6 +118,7 @@ public class BattleModel : MonoBehaviour {
 	{
 		mHitCallback = hitCallback;
 		mEndCallback = () => {
+			Debug.Log("Attack:EndCallback");
 			if(endCallback != null) {
 				endCallback();
 			}
@@ -149,6 +150,10 @@ public class BattleModel : MonoBehaviour {
 		// });
 	}
 
+	public Vector3 GetLaunchPosition() {
+		return transform.position + new Vector3(-2, 1, 0);
+	}
+
 	public void MoveForward(Vector2 targetPos, Callback callback = null) {
 		mTargetPosition = targetPos;
 		mOriginPosition = transform.position;
@@ -166,7 +171,6 @@ public class BattleModel : MonoBehaviour {
 		});
 	}
 	
-
 	public void MoveTo(Vector2 targetPos, float duration, Callback callback) {
 		mMoveAction.Reset();
 		mMoveAction.startPosition = transform.position;

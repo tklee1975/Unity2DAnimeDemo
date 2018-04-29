@@ -63,7 +63,8 @@ public class ScheduleAction : AnimeAction {
 	}
 
 	protected void StartScheduledAction(ScheduleItem item) {
-		StartAction(item.action);
+		//StartAction(item.action);
+		AddSubAction(item.action);
 	}
 
 
@@ -72,6 +73,7 @@ public class ScheduleAction : AnimeAction {
 
 		CheckAndStartAction();
 
+		//Debug.Log("PendingCount=" + mPendingList.Count);
 		if(mPendingList.Count == 0) {
 			MarkAsDone();
 		}

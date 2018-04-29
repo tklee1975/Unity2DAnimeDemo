@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class AnimeAction {
 	public string name = "";
+
 	protected bool mIsDone = false;
+	protected bool mAllDone = false;		// 
 	protected bool mIsStarted = false;
 
 	protected float mDuration = 0;		// duration = 0  mean instant action 
@@ -38,20 +40,35 @@ public class AnimeAction {
 	}
 
 	public virtual void Reset() {
+		mSubActionList.Clear();
 		mIsStarted = false;
 		mIsDone = false;	
+		mAllDone = false;
 		mTimeElapse = 0;	
 	}
 
 	public virtual void Update(float deltaTime) {
+		if(mAllDone) {
+			return;
+		}
 		mDeltaTime = deltaTime;
 		mTimeElapse += mDeltaTime;
 
-		if(CheckAndReduceTime()) {
-			MarkAsDone();
+		if(mIsDone == false) {
+			if(CheckAndReduceTime()) {
+				MarkAsDone();
+			}
+		
+			OnUpdate();				// update current 
 		}
 
-		OnUpdate();
+		if(mSubActionList.Count > 0) {
+			UpdateSubActions();		// update sub actions
+
+			if(mIsDone && IsSubActionDone()) {
+				MarkAllDone();
+			}
+		}
 	}
 	
 	public virtual void Step() {
@@ -63,7 +80,7 @@ public class AnimeAction {
 	}
 
 	public virtual bool IsDone() {
-		return mIsDone;
+		return mAllDone;
 	}
 
 	protected virtual void OnUpdate() {
@@ -82,15 +99,21 @@ public class AnimeAction {
 		SetDuration(-1);
 	}
 
+	protected void MarkAllDone() {
+		OnDone();
+		mAllDone = true;
+		Debug.Log("AnimeAction:" + name + " done");
+	}
+
 	protected void MarkAsDone() {
 		 if(mIsDone) {
             return;
         }
 
-		OnDone();
 		mIsDone = true;
-		mIsStarted = false;
-		Debug.Log("AnimeAction [" + name + "] done");
+		if(IsSubActionDone()){
+			MarkAllDone();
+		}
 	}
 
 	#region Duration Logic Action 
@@ -123,7 +146,34 @@ public class AnimeAction {
 		return mTimeElapse / mDuration;
 	}
 
+	#region Sub Action 
+	protected List<AnimeAction> mSubActionList = new List<AnimeAction>();
 
+	protected void AddSubAction(AnimeAction action) {
+		action.SetManager(mManager);
+		action.Start();
+		mSubActionList.Add(action);
+	}
+
+	protected bool IsSubActionDone() {
+		foreach(AnimeAction action in mSubActionList) {
+			if(action.IsDone() == false) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	protected void UpdateSubActions() {
+		foreach(AnimeAction action in mSubActionList) {
+			action.Update(mDeltaTime);
+		}
+
+		//if(is)
+	}
+	
+
+	#endregion
 
 
 	#endregion
