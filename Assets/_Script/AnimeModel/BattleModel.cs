@@ -3,7 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BattleModel : MonoBehaviour {
+	public enum Dir {
+		Left,
+		Right,
+	};
+
 	public float moveDuration = 0.3f;
+	public Dir faceDir = Dir.Left; 
 
 	protected Animator mAnimator;
 	protected AnimeEvent mAnimeEvent;
@@ -149,6 +155,15 @@ public class BattleModel : MonoBehaviour {
 		// 	ShowAttackAnime();
 		// });
 	}
+
+	public Vector3 GetHitPosition() {
+		float offsetX = -2;
+		if(faceDir == Dir.Right) {
+			offsetX = -offsetX;
+		}
+		return transform.position + new Vector3(offsetX, 0, 0);
+	}
+
 
 	public Vector3 GetLaunchPosition() {
 		return transform.position + new Vector3(-2, 1, 0);

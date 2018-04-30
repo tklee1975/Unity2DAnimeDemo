@@ -35,7 +35,7 @@ public class AttackActionTest : BaseTest {
 		HitValueAction damageAction = new HitValueAction();
 		damageAction.valueTextPrefab = hitValuePrefab;
 		damageAction.hitValue = 1000;
-		damageAction.position = targetModel.transform.position + new Vector3(0, 1, -2);
+		damageAction.position = targetModel.transform.position + new Vector3(0, 2, -2);
 		sequence.AddAction(damageAction);
 
 		return sequence;
@@ -51,7 +51,7 @@ public class AttackActionTest : BaseTest {
 		attackAction.actor = actor;
 		attackAction.style = style;
 		attackAction.isMoving = isMoving;
-		attackAction.targetPostion = target.transform.position + new Vector3(1, 0, -2) * actor.transform.localScale.x;
+		attackAction.targetPostion = target.GetHitPosition();
 		attackAction.onHitAction = onHitAction;
 		
 		return attackAction;
