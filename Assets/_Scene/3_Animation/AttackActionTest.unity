@@ -1742,6 +1742,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 1373815512621688, guid: 948142baab44b4000bc2884f5e898ad6,
     type: 2}
   explodeEffect: {fileID: 7400000, guid: e5d7e40e3f8f246d1a337fc30f1b89f8, type: 2}
+  slashEffect: {fileID: 7400000, guid: 968d2d3c241cc4d4fbf52404b0275c0c, type: 2}
   actionManager: {fileID: 1219140797}
 --- !u!4 &1934405127
 Transform:

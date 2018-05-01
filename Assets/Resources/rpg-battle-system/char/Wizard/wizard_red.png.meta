@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d4aac1718eb61475e96548cdb4fe15a8
-timeCreated: 1521745561
+timeCreated: 1525200406
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -76,6 +76,42 @@ TextureImporter:
     21300138: mage_red_33
     21300140: mage_red_34
     21300142: mage_red_35
+    21300144: wizard_red_0
+    21300146: wizard_red_1
+    21300148: wizard_red_2
+    21300150: wizard_red_3
+    21300152: wizard_red_4
+    21300154: wizard_red_5
+    21300156: wizard_red_6
+    21300158: wizard_red_7
+    21300160: wizard_red_8
+    21300162: wizard_red_9
+    21300164: wizard_red_10
+    21300166: wizard_red_11
+    21300168: wizard_red_12
+    21300170: wizard_red_13
+    21300172: wizard_red_14
+    21300174: wizard_red_15
+    21300176: wizard_red_16
+    21300178: wizard_red_17
+    21300180: wizard_red_18
+    21300182: wizard_red_19
+    21300184: wizard_red_20
+    21300186: wizard_red_21
+    21300188: wizard_red_22
+    21300190: wizard_red_23
+    21300192: wizard_red_24
+    21300194: wizard_red_25
+    21300196: wizard_red_26
+    21300198: wizard_red_27
+    21300200: wizard_red_28
+    21300202: wizard_red_29
+    21300204: wizard_red_30
+    21300206: wizard_red_31
+    21300208: wizard_red_32
+    21300210: wizard_red_33
+    21300212: wizard_red_34
+    21300214: wizard_red_35
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -192,505 +228,505 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mage_red_0
+      name: wizard_red_0
       rect:
         serializedVersion: 2
         x: 0
         y: 530
         width: 161
         height: 106
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mage_red_1
+      name: wizard_red_1
       rect:
         serializedVersion: 2
         x: 161
         y: 530
         width: 161
         height: 106
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mage_red_2
+      name: wizard_red_2
       rect:
         serializedVersion: 2
         x: 322
         y: 530
         width: 161
         height: 106
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mage_red_3
+      name: wizard_red_3
       rect:
         serializedVersion: 2
         x: 483
         y: 530
         width: 161
         height: 106
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mage_red_4
+      name: wizard_red_4
       rect:
         serializedVersion: 2
         x: 644
         y: 530
         width: 161
         height: 106
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mage_red_5
+      name: wizard_red_5
       rect:
         serializedVersion: 2
         x: 805
         y: 530
         width: 161
         height: 106
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mage_red_6
+      name: wizard_red_6
       rect:
         serializedVersion: 2
         x: 0
         y: 424
         width: 161
         height: 106
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mage_red_7
+      name: wizard_red_7
       rect:
         serializedVersion: 2
         x: 161
         y: 424
         width: 161
         height: 106
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mage_red_8
+      name: wizard_red_8
       rect:
         serializedVersion: 2
         x: 322
         y: 424
         width: 161
         height: 106
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mage_red_9
+      name: wizard_red_9
       rect:
         serializedVersion: 2
         x: 483
         y: 424
         width: 161
         height: 106
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mage_red_10
+      name: wizard_red_10
       rect:
         serializedVersion: 2
         x: 644
         y: 424
         width: 161
         height: 106
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mage_red_11
+      name: wizard_red_11
       rect:
         serializedVersion: 2
         x: 805
         y: 424
         width: 161
         height: 106
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mage_red_12
+      name: wizard_red_12
       rect:
         serializedVersion: 2
         x: 0
         y: 318
         width: 161
         height: 106
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mage_red_13
+      name: wizard_red_13
       rect:
         serializedVersion: 2
         x: 161
         y: 318
         width: 161
         height: 106
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mage_red_14
+      name: wizard_red_14
       rect:
         serializedVersion: 2
         x: 322
         y: 318
         width: 161
         height: 106
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mage_red_15
+      name: wizard_red_15
       rect:
         serializedVersion: 2
         x: 483
         y: 318
         width: 161
         height: 106
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mage_red_16
+      name: wizard_red_16
       rect:
         serializedVersion: 2
         x: 644
         y: 318
         width: 161
         height: 106
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mage_red_17
+      name: wizard_red_17
       rect:
         serializedVersion: 2
         x: 805
         y: 318
         width: 161
         height: 106
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mage_red_18
+      name: wizard_red_18
       rect:
         serializedVersion: 2
         x: 0
         y: 212
         width: 161
         height: 106
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mage_red_19
+      name: wizard_red_19
       rect:
         serializedVersion: 2
         x: 161
         y: 212
         width: 161
         height: 106
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mage_red_20
+      name: wizard_red_20
       rect:
         serializedVersion: 2
         x: 322
         y: 212
         width: 161
         height: 106
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mage_red_21
+      name: wizard_red_21
       rect:
         serializedVersion: 2
         x: 483
         y: 212
         width: 161
         height: 106
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mage_red_22
+      name: wizard_red_22
       rect:
         serializedVersion: 2
         x: 644
         y: 212
         width: 161
         height: 106
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mage_red_23
+      name: wizard_red_23
       rect:
         serializedVersion: 2
         x: 805
         y: 212
         width: 161
         height: 106
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mage_red_24
+      name: wizard_red_24
       rect:
         serializedVersion: 2
         x: 0
         y: 106
         width: 161
         height: 106
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mage_red_25
+      name: wizard_red_25
       rect:
         serializedVersion: 2
         x: 161
         y: 106
         width: 161
         height: 106
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mage_red_26
+      name: wizard_red_26
       rect:
         serializedVersion: 2
         x: 322
         y: 106
         width: 161
         height: 106
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mage_red_27
+      name: wizard_red_27
       rect:
         serializedVersion: 2
         x: 483
         y: 106
         width: 161
         height: 106
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mage_red_28
+      name: wizard_red_28
       rect:
         serializedVersion: 2
         x: 644
         y: 106
         width: 161
         height: 106
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mage_red_29
+      name: wizard_red_29
       rect:
         serializedVersion: 2
         x: 805
         y: 106
         width: 161
         height: 106
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mage_red_30
+      name: wizard_red_30
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 161
         height: 106
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mage_red_31
+      name: wizard_red_31
       rect:
         serializedVersion: 2
         x: 161
         y: 0
         width: 161
         height: 106
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mage_red_32
+      name: wizard_red_32
       rect:
         serializedVersion: 2
         x: 322
         y: 0
         width: 161
         height: 106
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mage_red_33
+      name: wizard_red_33
       rect:
         serializedVersion: 2
         x: 483
         y: 0
         width: 161
         height: 106
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mage_red_34
+      name: wizard_red_34
       rect:
         serializedVersion: 2
         x: 644
         y: 0
         width: 161
         height: 106
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: mage_red_35
+      name: wizard_red_35
       rect:
         serializedVersion: 2
         x: 805
         y: 0
         width: 161
         height: 106
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

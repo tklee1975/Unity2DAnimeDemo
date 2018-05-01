@@ -14,7 +14,7 @@ public class MoveAction : AnimeAction {
 	protected Transform mModelTransform = null;
 
 	protected override void OnStart() {
-		if(name != "") {
+		if(name == "") {
 			name = "Move";
 		}
 

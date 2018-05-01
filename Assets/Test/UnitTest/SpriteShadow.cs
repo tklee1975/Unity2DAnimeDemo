@@ -24,7 +24,7 @@ public class SpriteShadow : MonoBehaviour {
 		shadowRenderer.color = shadowColor;
 
 		Vector3 localScale = transform.localScale;
-		localScale.y = shadowScale;
+		localScale.y = -shadowScale;
 		transform.localScale = localScale;
 	}
 
@@ -32,8 +32,8 @@ public class SpriteShadow : MonoBehaviour {
 	void Start () {
 		originRenderer = transform.parent.GetComponent<SpriteRenderer>();
 
-		Debug.Log("OriginRenderer=" + originRenderer);
-		Debug.Log("shadowRenderer=" + shadowRenderer.ToString());
+		//Debug.Log("OriginRenderer=" + originRenderer);
+		//Debug.Log("shadowRenderer=" + shadowRenderer.ToString());
 	}
 	
 	// Update is called once per frame

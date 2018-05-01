@@ -179,6 +179,7 @@ public class BattleModel : MonoBehaviour {
 	public void MoveBack(Callback callback = null) {
 		ShowBackwardAnime();
 		MoveTo(mOriginPosition, moveDuration, () => {
+			Debug.Log("MoveBack Finished!");
 			ShowIdleAnime();
 			if(callback != null) {
 				callback();
@@ -188,6 +189,7 @@ public class BattleModel : MonoBehaviour {
 	
 	public void MoveTo(Vector2 targetPos, float duration, Callback callback) {
 		mMoveAction.Reset();
+		mMoveAction.name = "moveTo:" + targetPos;
 		mMoveAction.startPosition = transform.position;
 
 		Vector3 endPos = transform.position;
@@ -218,11 +220,12 @@ public class BattleModel : MonoBehaviour {
 		} 
 		mMoveAction.Update(Time.deltaTime);
 		if(mMoveAction.IsDone()) {
+			Debug.Log("UpdateMove: " + mMoveAction.name + " done!");
 			mStartMove = false;
 			if(mMoveCallback != null) {
 				mMoveCallback();
 			}
-			mMoveCallback = null;
+			
 		}
 	}
 

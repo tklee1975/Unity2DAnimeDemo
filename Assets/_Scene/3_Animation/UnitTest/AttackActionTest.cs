@@ -12,6 +12,7 @@ public class AttackActionTest : BaseTest {
 
 	public GameObject projectilePrefab;
 	public AnimationClip explodeEffect;
+	public AnimationClip slashEffect;
 
 
 	public AnimeActionManager actionManager;
@@ -22,9 +23,16 @@ public class AttackActionTest : BaseTest {
 		return CreateHitDamageAction(enemy);
 	}
 
-	public AnimeAction CreateHitDamageAction(BattleModel targetModel) {
+	public AnimeAction CreateHitDamageAction(BattleModel targetModel, AnimationClip hitEffect=null) {
 		SequenceAction sequence = new SequenceAction();
 		sequence.name = "HitSequence";
+
+		if(hitEffect != null) {
+			SimpleAnimationAction effectAction = new SimpleAnimationAction();
+			effectAction.clip = slashEffect;
+			effectAction.spawnPosition = targetModel.transform.position  + new Vector3(0, 1, -2);
+			sequence.AddAction(effectAction);
+		}
 
 		HitAction hitAction = new HitAction();
 		hitAction.name = "enemyHit";
@@ -132,7 +140,7 @@ public class AttackActionTest : BaseTest {
 		demoFight.AddAction(p1Attack);
 
 		AnimeAction p2Attack = CreateAttackAction(hero, enemy, 0, 
-							true, CreateHitDamageAction(enemy));
+							true, CreateHitDamageAction(enemy, slashEffect));
 		demoFight.AddAction(p2Attack);
 
 		actionManager.RunAction(demoFight);
