@@ -157,10 +157,11 @@ public class BattleModel : MonoBehaviour {
 	}
 
 	public Vector3 GetHitPosition() {
-		float offsetX = -2;
+		float offsetX = -1;
 		if(faceDir == Dir.Right) {
 			offsetX = -offsetX;
 		}
+		if(transform.localScale.x < 0) { offsetX *= -1; }
 		return transform.position + new Vector3(offsetX, 0, 0);
 	}
 
