@@ -24,8 +24,8 @@ public class BattleModel : MonoBehaviour {
 	protected Callback mMoveCallback;
 	
 
-	protected Vector2 mOriginPosition;
-	protected Vector2 mTargetPosition;
+	protected Vector3 mOriginPosition;
+	protected Vector3 mTargetPosition;
 
 	protected int mDebugCounter;		// For debugging
 	
@@ -170,7 +170,7 @@ public class BattleModel : MonoBehaviour {
 		return transform.position + new Vector3(-2, 1, 0);
 	}
 
-	public void MoveForward(Vector2 targetPos, Callback callback = null) {
+	public void MoveForward(Vector3 targetPos, Callback callback = null) {
 		mTargetPosition = targetPos;
 		mOriginPosition = transform.position;
 		ShowForwardAnime();
@@ -180,7 +180,7 @@ public class BattleModel : MonoBehaviour {
 	public void MoveBack(Callback callback = null) {
 		ShowBackwardAnime();
 		MoveTo(mOriginPosition, moveDuration, () => {
-			Debug.Log("MoveBack Finished!");
+			//Debug.Log("MoveBack Finished!");
 			ShowIdleAnime();
 			if(callback != null) {
 				callback();
@@ -188,14 +188,14 @@ public class BattleModel : MonoBehaviour {
 		});
 	}
 	
-	public void MoveTo(Vector2 targetPos, float duration, Callback callback) {
+	public void MoveTo(Vector3 targetPos, float duration, Callback callback) {
 		mMoveAction.Reset();
 		mMoveAction.name = "moveTo:" + targetPos;
 		mMoveAction.startPosition = transform.position;
 
-		Vector3 endPos = transform.position;
-		endPos.x = targetPos.x; endPos.y = targetPos.y;
-		mMoveAction.endPosition = endPos;
+		// Vector3 endPos = transform.position;
+		// endPos.x = targetPos.x; endPos.y = targetPos.y;
+		mMoveAction.endPosition = targetPos;
 
 		mMoveAction.SetDuration(duration);
 

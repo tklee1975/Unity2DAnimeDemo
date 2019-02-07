@@ -8,7 +8,7 @@ public class AttackAction : AnimeAction {
 	public short style = 0;
 
 	public bool isMoving = true;
-	public Vector2 targetPostion = new Vector2(0, 0);
+	public Vector3 targetPostion;
 
 	
 	protected override void OnStart() {
@@ -27,8 +27,7 @@ public class AttackAction : AnimeAction {
 
 	protected void StartMovingAttack() {
 
-		Vector2 endPos = targetPostion;
-
+		
 		BattleModel.Callback hitCallback = () => {
 			OnAttackHit();
 		};
@@ -39,8 +38,8 @@ public class AttackAction : AnimeAction {
 			MarkAsDone();
 		};
 
-		Debug.Log("Start Moving Fwd");
-		actor.MoveForward(endPos, () => {
+		Debug.Log("Start Moving Fwd： targetPos=" + targetPostion);
+		actor.MoveForward(targetPostion, () => {
 			Debug.Log("Start Attack");
 			actor.Attack(style, hitCallback, ()=> {
 				Debug.Log("Start Move Bak");
